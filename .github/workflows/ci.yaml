@@ -44,6 +44,7 @@ jobs:
       with:
         version: v1.56.2
         working-directory: .
+        args: ./...
   
   push:
     runs-on: ubuntu-latest
