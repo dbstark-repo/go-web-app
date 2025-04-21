@@ -43,6 +43,7 @@ jobs:
       uses: golangci/golangci-lint-action@v6
       with:
         version: v1.56.2
+        working-directory: go-web-app
   
   push:
     runs-on: ubuntu-latest
@@ -88,7 +89,7 @@ jobs:
     - name: Commit and push changes
       run: |
         git config --global user.email "debjyotibiswas295@gmail.com"
-        git config --global user.name "dbstark-repo
+        git config --global user.name "dbstark-repo"
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
         git push
